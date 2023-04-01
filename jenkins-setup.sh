@@ -25,13 +25,16 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
 
 echo $JENKINS_CONTROLLER_CONTAINER
 
-#docker cp jenkins.yaml $JENKINS_CONTROLLER_CONTAINER:/var/jenkins_home/casc_configs/
+PUB_KEY=$(cat .ssh/jenkins-ssh.pub)
 
 JENKINS_AGENT_CONTAINER=$( docker run \
     -d --rm  \
     --name=agent1 \
     -p 22:22 \
-    -e "JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMxB6JefnIX/ZB8uOq1Qpo5+N8/E+P+CPGD3YkTcsY/M dillonmarquard@ip-10-0-0-48.ec2.internal" \
+    -e "JENKINS_AGENT_SSH_PUBKEY=$PUB_KEY" \
     jenkins/ssh-agent:alpine )
 
 echo $JENKINS_AGENT_CONTAINER
+
+echo $PUB_KEY
+echo $PRV_KEY
