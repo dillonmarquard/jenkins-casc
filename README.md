@@ -1,29 +1,18 @@
-# jenkins-test      
+# Jenkins CI/CD Example     
 
-## goal
-1. demonstrate simple use-case for jenkins      
-2. understand how to setup and run a jenkins server      
-    a. configure master server as code      
-    b. setup secure agent nodes     
-    c. connect github repos to run build on commit for CI
+## Goals
+I wanted to demonstrate how to setup and configure a jenkins controller using the configuration-as-code plugin.     
+This supports a more scalable architecture that can be reproduced at any time.
+Maintaining a Jenkins home directory does not scale 
 
-## setup     
-// run jenkins master server (initial setup)    
-$ ./docker-run.sh   
-// create rsa key in master (passphrase optional)
-$ ssh-keygen -f ~/.ssh/jenkins_agent_key    
-// add private key to credentials       
-$ cat /.ssh/jenkins_agent_key           
-// save public key for later            
-$ cat /.ssh/jenkins_agent_key.pub       
-> username: jenkins     
-> private key (enter directly): <paste private key from keygen>  
-> passphrase: <if the key was generated with one; else leave blank>
+## Requirements
+docker:^20.10.22
 
-// add public key to docker-jenkins-agent.sh variable       
-$ ./docker-jenkins-agent.sh     
-// add pipeline to jenkins master       
-> Definition: Pipeline script from SCM      
-> SCM: git      
-> repository url: https://github.com/dillonmarquard/jenkins-test.git        
-> credentials: jenkins      
+## Setup
+generate ssh permissions for slave node (no passphrase)     
+./gen-ssh.sh    
+
+./jenkins-setup.sh  
+
+## Configuration
+
