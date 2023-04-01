@@ -16,3 +16,4 @@ generate ssh permissions for slave node (no passphrase)
 
 ## Configuration
 
+testing multipipeline branch
