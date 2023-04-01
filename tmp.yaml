@@ -1,0 +1,175 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - basicSSHUserPrivateKey:
+          id: "2cfc9f14-a6f0-42c1-b6af-0f8bc3a957d4"
+          passphrase: "{AQAAABAAAAAQcukqFOa9W3OSJlX4C0wqLBw2mjHCjCxk61XJRpCD0gw=}"
+          privateKeySource:
+            directEntry:
+              privateKey: "{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}"
+          scope: GLOBAL
+          username: "jenkins"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  labelAtoms:
+  - name: "agent1"
+  - name: "built-in"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodes:
+  - permanent:
+      labelString: "agent1"
+      launcher:
+        ssh:
+          credentialsId: "2cfc9f14-a6f0-42c1-b6af-0f8bc3a957d4"
+          host: "10.0.0.48"
+          port: 22
+          retryWaitTime: 5
+          sshHostKeyVerificationStrategy:
+            manuallyTrustedKeyVerificationStrategy:
+              requireInitialManualTrust: false
+      name: "agent1"
+      remoteFS: "/home/jenkins"
+      retentionStrategy: "always"
+  numExecutors: 1
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "dmarq"
+        name: "Dillon Marquard"
+        properties:
+        - "favorite"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "dmarquard4@gmail.com"
+        - "apiToken"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  gitHooks:
+    allowedOnAgents: false
+    allowedOnController: false
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
+  sSHD:
+    port: -1
+unclassified:
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        enableCache: false
+        manageHooks: false
+        repositoriesCacheDuration: 0
+        teamCacheDuration: 0
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  buildStepOperation:
+    enabled: false
+  email-ext:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    defaultTriggerIds:
+    - "hudson.plugins.emailext.plugins.trigger.FailureTrigger"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: -1
+    precedenceBulk: false
+    watchingEnabled: false
+  enrichedSummaryConfig:
+    enrichedSummaryEnabled: false
+    httpClientDelayBetweenRetriesInSeconds: 1
+    httpClientMaxRetries: 3
+    httpClientTimeoutInSeconds: 1
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://localhost:8080/github-webhook/"
+  globalTimeOutConfiguration:
+    operations:
+    - "abortOperation"
+    overwriteable: false
+  injectionConfig:
+    allowUntrusted: false
+    enabled: false
+    injectCcudExtension: false
+    injectMavenExtension: false
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://localhost:8080/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  pollSCM:
+    pollingThreadCount: 10
+  scmGit:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  timestamper:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
