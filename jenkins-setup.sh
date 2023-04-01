@@ -31,7 +31,7 @@ JENKINS_AGENT_CONTAINER=$( docker run \
     -d --rm  \
     --name=agent1 \
     -p 22:22 \
-    -e "JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6hTERqmu0YT7uEbXbgghpo7sBlxme6uAOGhEB1j//XluqqyDCgpovVwyFhHfCJPIOZincc9UnxBh/P+BXSjV8/yqZW7O8Fq6fKyaEznRg27s9cfDMQ7SESJATdT+Qk0m7/dsgatQ8ogy+byGzdv575bTdz7EB1x+EVwfdXV7aHzA2VIeH+CwyHhkeOFdWe9B0jTPfQ/IDse2ykmaWhLjyQLMhHotV1vSVySsQ0CDEc+7BRCbQ89g5+WvTVUZ+nFeFv2ngCGvGD2UrmD21vJyWpfMHmJJLWC8yXVp2cmLZA1s4xrx7+2TzHXcPwL+gVbr0gi/KwWQApcKPor4X6bDSZ4e4SI3dUHiNwdK6lpezpEoRTbcsM4OD50dboFnxYP4xyTKPFDEk+TDcngdXc2hHlOK/8cImWUoRUmirRBUF9IzXJZXzYHk5qhs72C4KZ/Il+cBfP8+Id+nU4d+SHhusHErO/hxvgGRFqt+LR7JOJjxss6QcwDATFrlxA8lZdXE= jenkins@d6383a2df1c4" \
+    -e "JENKINS_AGENT_SSH_PUBKEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMxB6JefnIX/ZB8uOq1Qpo5+N8/E+P+CPGD3YkTcsY/M dillonmarquard@ip-10-0-0-48.ec2.internal" \
     jenkins/ssh-agent:alpine )
 
 echo $JENKINS_AGENT_CONTAINER
