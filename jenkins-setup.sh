@@ -23,15 +23,15 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     --volume jenkins-docker-certs:/certs/client:ro \
     jenkins-controller )
 
-echo $JENKINS_CONTROLLER_CONTAINER
-
 PUB_KEY=$(cat .ssh/jenkins-ssh.pub)
 
 JENKINS_AGENT_CONTAINER=$( docker run \
     -d --rm  \
     --name=agent1 \
+    --network jenkins \
     -p 22:22 \
     -e "JENKINS_AGENT_SSH_PUBKEY=$PUB_KEY" \
     jenkins/ssh-agent:alpine )
 
+echo $JENKINS_CONTROLLER_CONTAINER
 echo $JENKINS_AGENT_CONTAINER
