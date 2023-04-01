@@ -9,6 +9,12 @@ credentials:
               privateKey: "${readFile:/var/jenkins_home/.ssh/jenkins-ssh}"
           scope: GLOBAL
           username: "jenkins"
+      - usernamePassword:
+          description: "github personal access token"
+          id: "76eca70f-41e5-4f04-900c-8482a11f5a56"
+          password: "${readFile:/var/jenkins_home/.ssh/github-personal-token}"
+          scope: GLOBAL
+          username: "dmarquard4@gmail.com"
 jenkins:
   agentProtocols:
   - "JNLP4-connect"
