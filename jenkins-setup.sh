@@ -35,6 +35,3 @@ JENKINS_AGENT_CONTAINER=$( docker run \
     jenkins/ssh-agent:alpine )
 
 echo $JENKINS_AGENT_CONTAINER
-
-echo $PUB_KEY
-echo $PRV_KEY
