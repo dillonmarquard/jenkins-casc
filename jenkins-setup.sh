@@ -1,5 +1,7 @@
 #!/bin/bash
 
+HOST_IP="3.248.253.57"
+
 # setup bridge network for jenkins
 docker network create jenkins
 
@@ -17,7 +19,8 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     --env DOCKER_TLS_VERIFY=1 \
     --env GITHUB_REPO=https://github.com/dillonmarquard/jenkins-test.git \
     --env CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml \
-    --publish 8080:8080 \
+    --env EC2_HOST_IP=$HOST_IP \
+    --publish 80:8080 \
     --publish 50000:50000 \
     --volume jenkins-data:/var/jenkins_home \
     --volume jenkins-docker-certs:/certs/client:ro \
@@ -29,7 +32,7 @@ JENKINS_AGENT_CONTAINER=$( docker run \
     -d --rm  \
     --name=agent1 \
     --network jenkins \
-    -p 22:22 \
+    -p 4444:22 \
     -e "JENKINS_AGENT_SSH_PUBKEY=$PUB_KEY" \
     jenkins/ssh-agent:alpine )
 

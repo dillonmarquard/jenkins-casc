@@ -6,19 +6,25 @@ credentials:
           id: "5e42fb34-f7cd-454f-90ff-e6177df3e27f"
           privateKeySource:
             directEntry:
-              privateKey: "${readFile:/var/jenkins_home/.ssh/jenkins-ssh}"
+              privateKey: ${readFile:/var/jenkins_home/.ssh/jenkins-ssh}
           scope: GLOBAL
           username: "jenkins"
       - usernamePassword:
           description: "github personal access token"
           id: "76eca70f-41e5-4f04-900c-8482a11f5a56"
-          password: "${readFile:/var/jenkins_home/.ssh/github-personal-token}"
+          password: ${readFile:/var/jenkins_home/.ssh/github-personal-token}
           scope: GLOBAL
           username: "dmarquard4@gmail.com"
 jenkins:
   agentProtocols:
   - "JNLP4-connect"
   - "Ping"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+       - id: dmarq
+         password: dmarq 
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
@@ -38,8 +44,8 @@ jenkins:
       launcher:
         ssh:
           credentialsId: "5e42fb34-f7cd-454f-90ff-e6177df3e27f"
-          host: "10.0.0.48"
-          port: 22
+          host: "${EC2_HOST_IP}"
+          port: 4444
           retryWaitTime: 5
           sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
       name: "agent1"
@@ -135,7 +141,7 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "http://localhost:8080/github-webhook/"
+    hookUrl: "http://${EC2_HOST_IP}:80/github-webhook/"
   globalTimeOutConfiguration:
     operations:
     - "abortOperation"
@@ -149,7 +155,7 @@ unclassified:
     storage: "file"
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "http://localhost:8080/"
+    url: "http://${EC2_HOST_IP}:80/"
   mailer:
     charset: "UTF-8"
     useSsl: false

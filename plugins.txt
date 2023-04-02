@@ -39,7 +39,6 @@ pipeline-stage-tags-metadata
 script-security
 structs
 workflow-job
-configuration-as-code
 jakarta-mail-api
 scm-api
 token-macro
@@ -110,3 +109,4 @@ matrix-auth
 pam-auth
 ldap
 email-ext
+configuration-as-code
