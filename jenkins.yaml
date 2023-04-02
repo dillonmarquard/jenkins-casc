@@ -24,7 +24,15 @@ jenkins:
       allowsSignup: false
       users:
        - id: dmarq
-         password: dmarq 
+         password: ${adminpw:-dmarq}
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Overall/Read:anonymous"
+        - "Job/Read:anonymous"
+        - "View/Read:anonymous"
+        - "Overall/Administer:authenticated"
+  crumbIssuer: "standard" 
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
