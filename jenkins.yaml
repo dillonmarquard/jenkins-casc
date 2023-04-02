@@ -23,15 +23,21 @@ jenkins:
     local:
       allowsSignup: false
       users:
-       - id: dmarq
-         password: ${adminpw:-dmarq}
+        - id: "admin"
+          password: "admin"
+        - id: "dev"
+          password: "dev"
   authorizationStrategy:
     globalMatrix:
-      grantedPermissions:
-        - "Overall/Read:anonymous"
-        - "Job/Read:anonymous"
-        - "View/Read:anonymous"
-        - "Overall/Administer:authenticated"
+      permissions:
+        - "Job/Build:dev"
+        - "Job/Cancel:dev"
+        - "Job/Read:dev"
+        - "Job/Workspace:dev"
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+        - "Run/Replay:dev"
+        - "Run/Update:dev"
   crumbIssuer: "standard" 
   disableRememberMe: true
   labelAtoms:
