@@ -35,7 +35,7 @@ jenkins:
         - "Job/Read:dev"
         - "Job/Workspace:dev"
         - "Overall/Administer:admin"
-        - "Overall/Read:authenticated"
+        - "Overall/Read:anonymous"
         - "Run/Replay:dev"
         - "Run/Update:dev"
   crumbIssuer: "standard" 
