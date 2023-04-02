@@ -30,14 +30,15 @@ jenkins:
   authorizationStrategy:
     globalMatrix:
       permissions:
-        - "Job/Build:dev"
-        - "Job/Cancel:dev"
-        - "Job/Read:dev"
-        - "Job/Workspace:dev"
-        - "Overall/Administer:admin"
-        - "Overall/Read:anonymous"
-        - "Run/Replay:dev"
-        - "Run/Update:dev"
+        - "USER:Job/Build:dev"
+        - "USER:Job/Cancel:dev"
+        - "USER:Job/Read:dev"
+        - "USER:Job/Read:anonymous"
+        - "USER:Job/Workspace:dev"
+        - "USER:Overall/Administer:admin"
+        - "USER:Overall/Read:anonymous"
+        - "USER:Run/Replay:dev"
+        - "USER:Run/Update:dev"
   crumbIssuer: "standard" 
   disableRememberMe: true
   labelAtoms:
