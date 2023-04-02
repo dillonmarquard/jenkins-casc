@@ -1,6 +1,8 @@
 #!/bin/bash
 
-HOST_IP="3.248.253.57"
+HOST_IP=$(curl ifconfig.me)
+read -p "Enter Private IP: " LOCAL_IP
+PUB_KEY=$(cat .ssh/jenkins-ssh.pub)
 
 # setup bridge network for jenkins
 docker network create jenkins
@@ -19,15 +21,14 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     --env DOCKER_TLS_VERIFY=1 \
     --env GITHUB_REPO=https://github.com/dillonmarquard/jenkins-test.git \
     --env CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml \
-    --env EC2_HOST_IP=$HOST_IP \
+    --env HOST_IP=$HOST_IP \
+    --env LOCAL_IP=$LOCAL_IP \
     --env JAVA_OPTS=-Djenkins.install.runSetupWizard=false \
     --publish 80:8080 \
     --publish 50000:50000 \
     --volume jenkins-data:/var/jenkins_home \
     --volume jenkins-docker-certs:/certs/client:ro \
     jenkins-controller )
-
-PUB_KEY=$(cat .ssh/jenkins-ssh.pub)
 
 JENKINS_AGENT_CONTAINER=$( docker run \
     -d --rm  \
