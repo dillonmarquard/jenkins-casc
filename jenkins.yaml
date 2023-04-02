@@ -33,13 +33,7 @@ jenkins:
         - "View/Read:anonymous"
         - "Overall/Administer:authenticated"
   crumbIssuer: "standard" 
-  authorizationStrategy:
-    loggedInUsersCanDoAnything:
-      allowAnonymousRead: false
-  crumbIssuer:
-    standard:
-      excludeClientIPFromCrumb: false
-  disableRememberMe: false
+  disableRememberMe: true
   labelAtoms:
   - name: "agent1"
   - name: "built-in"
