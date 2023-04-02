@@ -1,6 +1,5 @@
 #!/bin/bash
-
-HOST_IP=$(curl ifconfig.me)
+HOST_IP=$(curl -s ifconfig.me)
 read -p "Enter Private IP: " LOCAL_IP
 PUB_KEY=$(cat .ssh/jenkins-ssh.pub)
 
