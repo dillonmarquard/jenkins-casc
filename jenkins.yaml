@@ -68,22 +68,6 @@ jenkins:
   remotingSecurity:
     enabled: true
   scmCheckoutRetryCount: 0
-  securityRealm:
-    local:
-      allowsSignup: false
-      enableCaptcha: false
-      users:
-      - id: "dmarq"
-        name: "dmarq"
-        properties:
-        - "favorite"
-        - "myView"
-        - preferredProvider:
-            providerId: "default"
-        - "timezone"
-        - "apiToken"
-        - mailer:
-            emailAddress: "dmarquard4@gmail.com"
   slaveAgentPort: 50000
   updateCenter:
     sites:

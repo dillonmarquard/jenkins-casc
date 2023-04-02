@@ -20,7 +20,7 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     --env GITHUB_REPO=https://github.com/dillonmarquard/jenkins-test.git \
     --env CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml \
     --env EC2_HOST_IP=$HOST_IP \
-    --env JAVA_OPTS=-Djenkins.install.runSetupWizard=false \
+    --env JAVA_ARGS=-Djenkins.install.runSetupWizard=false \
     --publish 80:8080 \
     --publish 50000:50000 \
     --volume jenkins-data:/var/jenkins_home \
