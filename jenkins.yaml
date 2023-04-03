@@ -186,5 +186,12 @@ jobs:
                   repoOwner('dillonmarquard')
                   repository('jenkins-test')
               }
+              strategy {
+                defaultBranchPropertyStrategy {
+                    props {
+                        noTriggerBranchProperty()
+                    }
+                }
+            }
           }
       }
