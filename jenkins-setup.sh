@@ -29,7 +29,7 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     --volume jenkins-docker-certs:/certs/client:ro \
     jenkins-controller )
 
-# run jenkins agent
+# run jenkins agent (asdf)
 JENKINS_AGENT_CONTAINER=$( docker run \
     -d --rm  \
     --name=agent1 \
