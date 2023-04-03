@@ -176,7 +176,7 @@ tool:
   mavenGlobalConfig:
     globalSettingsProvider: "standard"
     settingsProvider: "standard"
-# jobs: not properly configured
+# 
 #   - script: |
         # multibranchPipelineJob('jenkins-test-pipeline') {
         #     branchSources {
