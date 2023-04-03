@@ -186,8 +186,8 @@ jobs:
                   repoOwner('dillonmarquard')
                   repository('jenkins-test')
               }
-              props {
-                  noTriggerBranchProperty()
-              }
+          }
+          properties {
+            
           }
       }
