@@ -207,11 +207,14 @@ jobs:
                         repository('jenkins-test')
                     }
                 }
-                strategy {
-                    defaultBranchPropertyStrategy {
-                        props {
-                            noTriggerBranchProperty()
-                        }
+                namedExceptionsBranchPropertyStrategy {
+                    // only trigger branch build for the `master` branch
+                    defaultProperties {
+                        noTriggerBranchProperty()
+                    }
+                    namedException {
+                        // could include noTriggerBranchProperty() here if there was no default properties
+                        branch('main')
                     }
                 }
             }
