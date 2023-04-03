@@ -178,13 +178,23 @@ tool:
     settingsProvider: "standard"
 jobs:
   - script: |
-      multibranchPipelineJob('jenkins-test-pipeline') {
-          branchSources {
-              github {
-                  id = '7aa23199-eb0f-823f-8e31-a744dd38156e'
-                  scanCredentialsId('76eca70f-41e5-4f04-900c-8482a11f5a56')
-                  repoOwner('dillonmarquard')
-                  repository('jenkins-test')
-              }
-          }
-      }
+        multibranchPipelineJob('jenkins-test-pipeline') {
+            branchSources {
+                    github {
+                        id = '7aa23199-eb0f-823f-8e31-a744dd38156e'
+                        scanCredentialsId('76eca70f-41e5-4f04-900c-8482a11f5a56')
+                        repoOwner('dillonmarquard')
+                        repository('jenkins-test')
+                    }
+                }
+            buildStrategies {
+                buildAnyBranches {
+                    strategies {
+                        buildAllBranches {
+                            strategies {
+                                skipInitialBuildOnFirstBranchIndexing()
+                            }
+                        }
+                    }
+                }
+        }

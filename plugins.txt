@@ -110,5 +110,6 @@ pam-auth
 ldap
 email-ext
 job-dsl
+basic-branch-build-strategies
 configuration-as-code
 
