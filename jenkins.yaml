@@ -176,7 +176,7 @@ tool:
   mavenGlobalConfig:
     globalSettingsProvider: "standard"
     settingsProvider: "standard"
-# a
+# 
 #   - script: |
         # multibranchPipelineJob('jenkins-test-pipeline') {
         #     branchSources {
@@ -207,14 +207,15 @@ jobs:
                         repository('jenkins-test')
                     }
                 }
-                namedExceptionsBranchPropertyStrategy {
-                    // only trigger branch build for the `master` branch
-                    defaultProperties {
-                        noTriggerBranchProperty()
-                    }
-                    namedException {
-                        // could include noTriggerBranchProperty() here if there was no default properties
-                        branch('main')
+                strategy {
+                    defaultBranchPropertyStrategy {
+                        props {
+                            noTriggerBranchProperty()
+                        }
+                        namedException {
+                            // could include noTriggerBranchProperty() here if there was no default properties
+                            branch('main')
+                        }
                     }
                 }
             }
