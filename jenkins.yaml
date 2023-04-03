@@ -185,7 +185,10 @@ jobs:
                     scanCredentialsId('76eca70f-41e5-4f04-900c-8482a11f5a56')
                     repoOwner('dillonmarquard')
                     repository('jenkins-test')
-                    defaultBranchPropertyStrategy {
+                }
+                strategy {
+                defaultBranchPropertyStrategy {
+                    props {
                         noTriggerBranchProperty()
                     }
                 }
