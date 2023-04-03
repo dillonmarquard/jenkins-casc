@@ -187,9 +187,4 @@ jobs:
                     repository('jenkins-test')
                 }     
             }
-            # properties {
-            #     buildStrategies {
-            #         skipInitialBuildOnFirstBranchIndexing()
-            #     }  
-            # }
         }
