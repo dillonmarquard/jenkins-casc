@@ -26,3 +26,4 @@ Enter IP of the agent (most likely your private ip, but you can host the agent e
 * 80 (jenkins webserver)
 * 4444 (agent ssh)
 * 22 (ec2 ssh)
+*
