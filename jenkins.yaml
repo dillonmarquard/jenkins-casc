@@ -187,9 +187,10 @@ jobs:
                     repository('jenkins-test')
                 }
                 strategy {
-                defaultBranchPropertyStrategy {
-                    props {
-                        noTriggerBranchProperty()
+                    defaultBranchPropertyStrategy {
+                        props {
+                            noTriggerBranchProperty()
+                        }
                     }
                 }
             }
