@@ -211,10 +211,10 @@ jobs:
                     defaultBranchPropertyStrategy {
                         props {
                             noTriggerBranchProperty()
-                        }
-                        namedException {
-                            // could include noTriggerBranchProperty() here if there was no default properties
-                            branch('main')
+                            namedException {
+                                // could include noTriggerBranchProperty() here if there was no default properties
+                                branch('main')
+                            }   
                         }
                     }
                 }
