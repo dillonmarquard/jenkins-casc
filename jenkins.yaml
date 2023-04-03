@@ -186,9 +186,5 @@ jobs:
                   repoOwner('dillonmarquard')
                   repository('jenkins-test')
               }
-              props {
-                  skipInitialBuildOnFirstBranchIndexing()
-              }
-
           }
       }
