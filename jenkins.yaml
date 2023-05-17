@@ -42,22 +42,22 @@ jenkins:
   crumbIssuer: "standard" 
   disableRememberMe: true
   labelAtoms:
-  - name: "agent1"
+  - name: "agent_489hvbic"
   - name: "built-in"
   markupFormatter: "plainText"
   mode: NORMAL
   myViewsTabBar: "standard"
   nodes:
   - permanent:
-      labelString: "agent1"
+      labelString: "agent_489hvbic"
       launcher:
         ssh:
           credentialsId: "5e42fb34-f7cd-454f-90ff-e6177df3e27f"
-          host: "${LOCAL_IP}"
+          host: "${AGENT_IP}"
           port: 4444
           retryWaitTime: 5
           sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
-      name: "agent1"
+      name: "agent_489hvbic"
       remoteFS: "/home/jenkins"
       retentionStrategy: "always"
       numExecutors: 5

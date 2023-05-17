@@ -1,6 +1,6 @@
 #!/bin/bash
 HOST_IP=$(curl -s ifconfig.me)
-read -p "Enter Private IP: " LOCAL_IP
+read -p "Enter AGENT IP: " AGENT_IP
 PUB_KEY=$(cat .ssh/jenkins-ssh.pub)
 
 # setup bridge network for jenkins
@@ -22,6 +22,7 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     --env CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml \
     --env HOST_IP=$HOST_IP \
     --env LOCAL_IP=$LOCAL_IP \
+    --env AGENT_IP=$AGENT_IP \
     --env JAVA_OPTS=-Djenkins.install.runSetupWizard=false \
     --publish 80:8080 \
     --publish 50000:50000 \
