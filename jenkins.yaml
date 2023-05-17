@@ -39,6 +39,7 @@ jenkins:
         - "USER:Overall/Read:anonymous"
         - "USER:Run/Replay:dev"
         - "USER:Run/Update:dev"
+        # - "USER:Overall/Administer:anonymous" # for vpn whitelist access
   crumbIssuer: "standard" 
   disableRememberMe: true
   labelAtoms:
