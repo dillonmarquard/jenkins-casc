@@ -43,6 +43,7 @@ jenkins:
   disableRememberMe: true
   labelAtoms:
   - name: "agent_489hvbic"
+  - name: "agent_4o9ch2bxv"
   - name: "built-in"
   markupFormatter: "plainText"
   mode: NORMAL
@@ -61,6 +62,19 @@ jenkins:
       remoteFS: "/home/jenkins"
       retentionStrategy: "always"
       numExecutors: 5
+  - permanent:
+      labelString: "agent_4o9ch2bxv"
+      launcher:
+        ssh:
+          credentialsId: "5e42fb34-f7cd-454f-90ff-e6177df3e27f"
+          host: "${AGENT_IP}"
+          port: 4445
+          retryWaitTime: 5
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent_4o9ch2bxv"
+      remoteFS: "/home/jenkins"
+      retentionStrategy: "always"
+      numExecutors: 5    
   numExecutors: 0
   primaryView:
     all:

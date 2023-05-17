@@ -31,13 +31,23 @@ JENKINS_CONTROLLER_CONTAINER=$( docker run \
     jenkins-controller )
 
 # run jenkins agent
-JENKINS_AGENT_CONTAINER=$( docker run \
+JENKINS_AGENT_CONTAINER1=$( docker run \
     -d --rm  \
-    --name=agent1 \
+    --name=agent_489hvbic \
     --network jenkins \
     -p 4444:22 \
     -e "JENKINS_AGENT_SSH_PUBKEY=$PUB_KEY" \
     jenkins/ssh-agent:alpine )
 
+JENKINS_AGENT_CONTAINER2=$( docker run \
+    -d --rm  \
+    --name=agent_4o9ch2bxv \
+    --network jenkins \
+    -p 4445:22 \
+    -e "JENKINS_AGENT_SSH_PUBKEY=$PUB_KEY" \
+    jenkins/ssh-agent:alpine )
+
+
 echo $JENKINS_CONTROLLER_CONTAINER
-echo $JENKINS_AGENT_CONTAINER
+echo $JENKINS_AGENT_CONTAINER1
+echo $JENKINS_AGENT_CONTAINER2
