@@ -1,5 +1,5 @@
 #!/bin/bash
-docker container stop agent1 jenkins-controller
-docker container prune -f
+docker container stop jenkins-controller agent_489hvbic agent_4o9ch2bxv
+docker container rm jenkins-controller agent_489hvbic agent_4o9ch2bxv -f
 docker volume prune -f
-docker network prune -f
+docker network rm jenkins -f
