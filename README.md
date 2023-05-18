@@ -6,10 +6,10 @@ This supports a more scalable architecture that can be reproduced at any time fr
 Maintaining Jenkins through the UI is time-consuming and tedious, so this project aims to provide a skeleton for building out more maintainable jenkins environments.
 
 ## Requirements
-docker:^20.10.17
-kubectl:^1.25.4
-minikube:^1.30.1
-
+docker:^20.10.17    
+kubectl:^1.25.4    
+minikube:^1.30.1    
+    
 ## Setup 
 generate ssh permissions for slave node (no passphrase)     
 ./gen-ssh.sh  
