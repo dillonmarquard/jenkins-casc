@@ -18,16 +18,19 @@ create .ssh/github-personal-token and paste your github PAT token with repo acce
   
 ## Run with Kubernetes
 ./kubernetes-setup.sh
-
+    
+## Kubernetes Cloud Configuration    
+* in-progress    
+    
 ## Run with Docker
 ./jenkins-setup.sh  
-
+    
 Enter IP of the agent (most likely your private ip, but you can host the agent elsewhere) (hostname -i doesnt work on mac)
-
+    
 ## Docker Cloud Configuration
-
+    
 ### EC2 Instance 
-
+    
 #### Network Security
 * 80 (jenkins webserver)
 * 4444 (agent ssh)
