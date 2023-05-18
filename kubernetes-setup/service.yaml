@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-service
+  namespace: devops-tools
+  annotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/path:   /
+      prometheus.io/port:   '8080'
+spec:
+  selector:
+    app: jenkins-server
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 32000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-agent-service
+  namespace: devops-tools
+  annotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/path:   /
+      prometheus.io/port:   '4444'
+spec:
+  selector:
+    app: jenkins-agent-server
+  ports:
+    - port: 4444
+      targetPort: 22
