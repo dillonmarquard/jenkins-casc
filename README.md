@@ -11,10 +11,10 @@ kubectl:^1.25.4
 minikube:^1.30.1    
     
 ## Setup 
-generate ssh permissions for slave node (no passphrase)     
+generate ssh permissions for worker node(s) (no passphrase)     
 ./gen-ssh.sh  
   
-create .ssh/github-personal-token and paste your github PAT token with repo access    
+create .ssh/github-personal-token and paste your github PAT token with repo access
   
 ## Run with Kubernetes
 ./kubernetes-setup.sh
