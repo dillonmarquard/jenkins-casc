@@ -16,10 +16,10 @@ generate ssh permissions for slave node (no passphrase)
   
 create .ssh/github-personal-token and paste your github PAT token with repo access    
   
-## Kubernetes
+## Run with Kubernetes
 ./kubernetes-setup.sh
 
-## Setup Docker
+## Run with Docker
 ./jenkins-setup.sh  
 
 Enter IP of the agent (most likely your private ip, but you can host the agent elsewhere) (hostname -i doesnt work on mac)
