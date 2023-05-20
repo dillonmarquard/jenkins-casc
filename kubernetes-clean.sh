@@ -1,2 +1,2 @@
 #!/bin/bash
-kubectl delete -f kubernetes-setup/
+kubectl delete -f kubernetes/

@@ -4,7 +4,7 @@ metadata:
   name: jenkins
   namespace: devops-tools
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: jenkins-server
@@ -23,8 +23,8 @@ spec:
           imagePullPolicy: Never
           resources:
             limits:
-              memory: "2Gi"
-              cpu: "1000m"
+              memory: "1Gi"
+              cpu: "500m"
             requests:
               memory: "500Mi"
               cpu: "500m"
@@ -58,10 +58,10 @@ spec:
             periodSeconds: 10
             timeoutSeconds: 5
             failureThreshold: 3
-      #     volumeMounts:
-      #       - name: jenkins-data
-      #         mountPath: /var/jenkins_home/
-      # volumes:
-      #   - name: jenkins-data
-      #     persistentVolumeClaim:
-      #         claimName: jenkins-pv-claim
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home/
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+              claimName: jenkins-pv-claim

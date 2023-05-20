@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-volume-setup
+  namespace: devops-tools
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: volume-setup-server
+  template:
+    metadata:
+      labels:
+        app: volume-setup-server
+    spec:
+      containers:
+        - name: jenkins-volume-setup
+          image: nginx:latest
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "250m"
+            requests:
+              memory: "500Mi"
+              cpu: "250m"
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home/
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+              claimName: jenkins-pv-claim

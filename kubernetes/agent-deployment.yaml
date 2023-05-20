@@ -18,14 +18,14 @@ spec:
           image: jenkins/ssh-agent:alpine
           resources:
             limits:
-              memory: "5Gi"
-              cpu: "1000m"
-            requests:
               memory: "2Gi"
+              cpu: "500m"
+            requests:
+              memory: "1Gi"
               cpu: "500m"
           env:
             - name: JENKINS_AGENT_SSH_PUBKEY
-              value: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJXQF+30FVOC2aQQih0gGa6LkGWc+4qzVyQqV7NGiKct dillonmarquard@Issuus-MacBook-Pro-2.local
+              value: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL2SUSqZAbKlbVeazP0NMtO9qK1y/g4cN6ucvqkAZvFh dillonmarquard@Issuus-MacBook-Pro-2.local
           ports:
             - name: tcp
               containerPort: 22
