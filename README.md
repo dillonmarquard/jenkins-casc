@@ -17,10 +17,10 @@ generate ssh permissions for worker node(s) (no passphrase)
 create .ssh/github-personal-token and paste your github PAT token with repo access
   
 ## Run with Kubernetes
-* need to setup persistent volume on initial configuration with alpine pod
-* kubectl cp .ssh <namespace>/<pod>:/var/jenkins_home/.ssh
-* kubectl cp jenkins.yaml <namespace>/<pod>:/var/jenkins_home/casc_configs/jenkins.yaml
-* kubectl cp plugins.txt <namespace>/<pod>:/var/jenkins_home/plugins.txt
+Setup minikube environment
+* minikube start
+* eval $(minikube -p minikube docker-env)
+* docker build -t jenkins-controller .
 
 ./kubernetes-setup.sh
     
