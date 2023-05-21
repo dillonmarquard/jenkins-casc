@@ -23,10 +23,10 @@ spec:
           imagePullPolicy: Never
           resources:
             limits:
-              memory: "1Gi"
+              memory: "3Gi"
               cpu: "500m"
             requests:
-              memory: "500Mi"
+              memory: "1Gi"
               cpu: "500m"
           env:
             - name: JAVA_OPTS
